@@ -4,7 +4,7 @@ List<int> prefilledList = new List<int> { 34, 7, 23, 32, 5, 62 };
 List<int> userList = new List<int>();
 bool exit = false;
 
-//Code menu section with options
+//Code menu section with options.
 while (!exit)
 {
     Console.WriteLine("Choose an option:");
