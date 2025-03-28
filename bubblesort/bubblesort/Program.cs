@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Generic; //to import Collections
 
 List<int> prefilledList = new List<int> { 34, 7, 23, 32, 5, 62 };
 List<int> userList = new List<int>();
 bool exit = false;
 
+//Code menu section with options
 while (!exit)
 {
     Console.WriteLine("Choose an option:");
@@ -14,7 +15,7 @@ while (!exit)
 
     switch (choice)
     {
-        case "1":
+        case "1": //for predefined list
             Console.WriteLine("Prefilled list before sorting:");
             DisplayList(prefilledList);
             BubbleSort(prefilledList);
@@ -22,7 +23,7 @@ while (!exit)
             DisplayList(prefilledList);
             break;
 
-        case "2":
+        case "2": //for taking user input
             userList.Clear();
             Console.WriteLine("Enter numbers separated by spaces:");
             string input = Console.ReadLine();
@@ -41,7 +42,7 @@ while (!exit)
             DisplayList(userList);
             break;
 
-        case "3":
+        case "3": //for exiting program
             exit = true;
             break;
 
@@ -50,6 +51,8 @@ while (!exit)
             break;
     }
 }
+
+//bubble sort logic
 static void BubbleSort(List<int> list)
 {
     for (int i = 0; i < list.Count - 1; i++)
@@ -66,6 +69,8 @@ static void BubbleSort(List<int> list)
     }
 }
 
+
+//function for displaying list
 static void DisplayList(List<int> list)
 {
     foreach (int num in list)
